@@ -41,7 +41,7 @@ function App() {
 
   return (
     <Router>
-      <Navbar title='TextModifier' mode={mode} toggleMode={darkMode} />
+      <Navbar title='TextUtils' mode={mode} toggleMode={darkMode} />
       <Routes>
         <Route path="/" element={<TextForm showAlert={showAlert} mode={mode} />} />
         <Route path="/about" element={<About mode={mode}/>} />
