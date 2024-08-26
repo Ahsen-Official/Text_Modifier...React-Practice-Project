@@ -5,7 +5,7 @@ import Alert from './components/Alert';
 import About from './components/About';
 import React, { useState } from 'react';
 import {
-  HashRouter,
+  HashRouter as Router,
   Routes,
   Route,
 } from "react-router-dom";
@@ -40,14 +40,14 @@ function App() {
   };
 
   return (
-    <HashRouter>
+    <Router>
       <Navbar title='TextModifier' mode={mode} toggleMode={darkMode} />
       <Routes>
         <Route path="/" element={<TextForm showAlert={showAlert} mode={mode} />} />
         <Route path="/about" element={<About mode={mode}/>} />
       </Routes>
       <Alert alert={alert} />
-    </HashRouter>
+    </Router>
   );
 }
 
